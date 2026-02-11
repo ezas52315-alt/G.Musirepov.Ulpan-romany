@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ұлпан: Қазақ әдебиетінен сандық оқу кешені</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0c1e35;
+            color: #f1f5f9;
+        }
+        .cinema-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+        }
+        .quiz-card {
+            background: rgba(30, 41, 100, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .media-container {
+            border: 8px solid #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background-color: #ffffff;
+        }
+        .assessment-rubric {
+            background: rgba(15, 23, 42, 0.9);
+            border-left: 4px solid #f59e0b;
+        }
+        .author-img {
+            object-fit: cover;
+            object-position: top;
+        }
+        /* Анимациялар */
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-pop {
+            animation: popIn 0.3s ease-out forwards;
+        }
+        
+        /* Жауап стильдері */
+        .correct-answer {
+            border: 2px solid #22c55e !important;
+            background-color: rgba(34, 197, 94, 0.2) !important;
+            color: #ffffff !important;
+        }
+        .wrong-answer {
+            border: 2px solid #ef4444 !important;
+            background-color: rgba(239, 68, 68, 0.2) !important;
+            color: #ffffff !important;
+        }
+
+        .responsive-iframe-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .audio-strip-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 2px solid #f59e0b;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <header class="max-w-5xl mx-auto text-center mb-12">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-6">
+            <div class="relative group">
+                <img src="https://static.insales-cdn.com/images/products/1/7303/665451655/pocketbook_obl.new-min__1_.png" 
+                     alt="Ұлпан романы" 
+                     class="w-48 md:w-64 rounded-lg shadow-2xl border-4 border-amber-500 transition-transform group-hover:scale-105">
+                <p class="text-xs text-amber-500 mt-2 font-bold uppercase">Роман</p>
+            </div>
+            <div class="relative group">
+                <img src="https://el.kz/storage/storage/element/2020/01/20/mainphoto/1945/1200xauto_PwvXRCOgutembapgFPcnv6ikcjZfxRugR9BLfMzU.jpg" 
+                     alt="Ғабит Мүсірепов" 
+                     class="w-48 md:w-64 h-64 md:h-80 author-img rounded-lg shadow-2xl border-4 border-slate-400 transition-transform group-hover:scale-105">
+                <p class="text-xs text-slate-400 mt-2 font-bold uppercase">Ғабит Мүсірепов</p>
+            </div>
+        </div>
+        <h1 class="cinema-title text-4xl md:text-6xl text-amber-500 mt-4 uppercase font-bold">ҰЛПАН</h1>
+        <p class="text-xl text-slate-400 italic">Қазақ әдебиетінен сандық оқу кешені</p>
+    </header>
+
+    <!-- Таныстырылым -->
+    <section class="max-w-5xl mx-auto mb-16">
+        <h2 class="cinema-title text-2xl text-amber-500 uppercase flex items-center gap-3 mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3m0 6l-3-3-3 3" />
+            </svg>
+            "Ұлпан" романы бойынша таныстырылым
+        </h2>
+        <div class="media-container bg-white">
+            <div class="responsive-iframe-container">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQBpK_9rl0RYNv4lxGvfZvBshyGBh1ctJ4TyVGgqQiGw3VT-qs6ynYkAkBqE_R8b1JPQBZVRyEOLndR/pubembed?start=false&loop=false" 
+                        frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Дыбыстық жазба -->
+    <section class="max-w-4xl mx-auto mb-16">
+        <div class="flex items-center gap-3 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            </svg>
+            <h2 class="cinema-title text-2xl text-amber-500 uppercase">Роман бойынша дыбыстық жазба</h2>
+        </div>
+        <div class="audio-strip-container shadow-2xl">
+            <iframe src="https://drive.google.com/file/d/1ERkloqZvPDFp8s5JLdTwHeT90pDrmIlgo7zSgASzEuw/preview" 
+                    width="100%" height="100%" frameborder="0" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Журнал (PDF) -->
+    <section class="max-w-5xl mx-auto mb-16">
+        <h2 class="cinema-title text-2xl text-amber-500 mb-6 uppercase flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            Оқу материалы (PDF)
+        </h2>
+        <div class="media-container bg-slate-900" style="height: 700px;">
+            <iframe src="https://drive.google.com/file/d/1Ha96mCo_WoyRIMf2ixPFnu6il36UqkMp/preview" 
+                    width="100%" height="100%" allow="autoplay" class="bg-white border-none"></iframe>
+        </div>
+        <p class="text-sm text-slate-500 mt-3 text-center italic">Ескерту: Материалды тікелей осы терезеден оқып шығыңыз.</p>
+    </section>
+
+    <!-- Зияткерлік ойын -->
+    <section class="max-w-5xl mx-auto mb-16">
+        <h2 class="cinema-title text-2xl text-amber-500 mb-6 uppercase flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Роман мазмұны бойынша зияткерлік ойын
+        </h2>
+        <div class="media-container" style="height: 600px;">
+            <iframe src="https://ezas52315-alt.github.io/Ulpan/" 
+                    width="100%" height="100%" frameborder="0" class="bg-slate-900 border-none"></iframe>
+        </div>
+    </section>
+
+    <!-- Интерактивті тест (ЖАҢАРТЫЛҒАН) -->
+    <section class="max-w-4xl mx-auto mb-16">
+        <h2 class="cinema-title text-3xl text-center text-amber-500 mb-8 uppercase">I БӨЛІМ: БІЛІМ ТЕКСЕРУ (15 СҰРАҚ)</h2>
+        <div id="quiz-container" class="space-y-6"></div>
+        <div class="text-center mt-8">
+            <button onclick="checkQuizResults()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform active:scale-95">
+                ✓ Тестті тексеру
+            </button>
+            <p id="quiz-score-display" class="mt-4 text-2xl font-bold hidden text-amber-400"></p>
+        </div>
+    </section>
+
+    <!-- Эссе бөлімі (ЖАҢАРТЫЛҒАН - ҚАТАЛ ТЕКСЕРУ) -->
+    <section class="max-w-4xl mx-auto mb-16">
+        <h2 class="cinema-title text-3xl text-center text-amber-500 mb-8 uppercase">II БӨЛІМ: ТАЛДАУ ЭССЕСІ</h2>
+        <div class="assessment-rubric p-6 rounded-xl mb-8">
+            <h4 class="text-amber-500 font-bold mb-4 uppercase text-sm border-b border-amber-500/20 pb-2">📋 Бағалау критерийлері (Макс: 10 балл):</h4>
+            <div class="grid md:grid-cols-3 gap-4 text-xs text-slate-300">
+                <div class="p-4 bg-slate-800 rounded shadow-inner text-center">
+                    <p class="text-amber-500 font-bold mb-1 uppercase tracking-tighter">Тезис (2 балл)</p>
+                    Тақырыптың ашылуы және негізгі ойдың жүйелілігі.
+                </div>
+                <div class="p-4 bg-slate-800 rounded shadow-inner text-center">
+                    <p class="text-amber-500 font-bold mb-1 uppercase tracking-tighter">Аргументтер (6 балл)</p>
+                    Келтірілген дәлелдердің шығарма мазмұнымен байланысы.
+                </div>
+                <div class="p-4 bg-slate-800 rounded shadow-inner text-center">
+                    <p class="text-amber-500 font-bold mb-1 uppercase tracking-tighter">Сауаттылық (2 балл)</p>
+                    Тілдік нормалардың сақталуы және әдеби стиль.
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-card p-6 rounded-2xl">
+            <label class="block mb-4">
+                <span class="text-amber-500 font-bold block mb-2">Тақырыпты таңдаңыз:</span>
+                <select id="essay-topic" class="w-full bg-slate-800 border border-slate-600 rounded p-3 text-white focus:border-amber-500 outline-none">
+                    <option value="Ұлпан – қазақ даласындағы реформатор әйел бейнесі">1. Ұлпан – қазақ даласындағы реформатор әйел бейнесі</option>
+                    <option value="Есеней мен Торсан: ескі мен жаңаның тартысы">2. Есеней мен Торсан: ескі мен жаңаның тартысы</option>
+                </select>
+            </label>
+            <textarea id="essay-content" 
+                      class="w-full bg-slate-800 border border-slate-600 rounded p-4 h-64 focus:border-amber-500 outline-none transition-colors text-white" 
+                      placeholder="Эссеңізді осы жерге жазыңыз..."></textarea>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-xs text-slate-500" id="word-count">Сөз саны: 0 / 200</p>
+                <p class="text-xs text-slate-500 italic uppercase tracking-tighter text-amber-500/60">Көлемі: 200 сөзге дейін</p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8 pb-20">
+            <button id="essay-submit-btn" onclick="submitEssayStrict()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-4 px-12 rounded-full transition-all shadow-lg uppercase tracking-widest active:scale-95">
+                Жұмысты жіберу
+            </button>
+        </div>
+    </section>
+
+    <!-- Модальды терезе (Нәтиже) -->
+    <div id="report-modal" class="hidden fixed inset-0 bg-black/95 flex items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl border-2 border-amber-500 p-8 shadow-2xl animate-pop">
+            <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
+                <h3 class="text-2xl font-bold text-amber-500 uppercase tracking-widest">ЖҰМЫС ҚОРЫТЫНДЫСЫ</h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white text-3xl transition-colors">✕</button>
+            </div>
+            <div id="report-content" class="space-y-6 text-slate-200"></div>
+            <div class="mt-8 pt-6 border-t border-slate-700 bg-amber-900/10 p-6 rounded-xl text-center shadow-inner">
+                <p class="text-amber-500 font-bold uppercase text-sm mb-2 tracking-widest">Мұғалімге ақпарат:</p>
+                <p class="text-slate-300 text-sm italic">Осы есепті скриншот жасап немесе экраннан көрсетіп, мұғалімге тапсырыңыз!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Дыбыс эффектілері -->
+    <script>
+        // Дыбыстарды генерациялау
+        const playCorrect = () => {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(500, ctx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(1000, ctx.currentTime + 0.1);
+            gain.gain.setValueAtTime(0.1, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.1);
+        };
+
+        const playWrong = () => {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(200, ctx.currentTime);
+            osc.frequency.linearRampToValueAtTime(100, ctx.currentTime + 0.2);
+            gain.gain.setValueAtTime(0.1, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.2);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.2);
+        };
+
+        // Тест сұрақтары
+        const quizData = [
+            { type: 'choice', q: '1. Романның басты тақырыбы не?', options: ['Махаббат хикаясы', 'Жер дауы, жесір дауы және әйел теңдігі', 'Аңшылық өнер'], correct: 1 },
+            { type: 'choice', q: '2. "Ескі дала заңының соңғы тұяғы" кім?', options: ['Мүсіреп', 'Торсан', 'Есеней'], correct: 2 },
+            { type: 'choice', q: '3. Ұлпан қандай жаңашылдық енгізді?', options: ['Қару-жарақ жасау', 'Суармалы егіншілік пен отырықшылық', 'Орыс тілін үйрету'], correct: 1 },
+            { type: 'choice', q: '4. Торсанның әлеуметтік рөлі қандай?', options: ['Ақын', 'Жаңа буржуазия өкілі', 'Би'], correct: 1 },
+            { type: 'choice', q: '5. Оқиға қай ғасырда өтеді?', options: ['XVIII ғ.', 'XIX ғ. ІІ жартысы', 'XX ғ. басы'], correct: 1 },
+            { type: 'matching', q: '6-8. Кейіпкерлерді сипаттамасымен сәйкестендіріңіз:', items: [{k:'Ұлпан', v:'Ел анасы, реформатор'}, {k:'Мүсіреп', v:'Ақын, баяндаушы'}, {k:'Торсан', v:'Қу, мансапқор'}] },
+            { type: 'reorder', q: '9-11. Сюжеттік даму ретін қойыңыз (1-3):', items: ['Есенейдің ауылға келуі', 'Есеней мен Ұлпанның үйленуі', 'Ұлпанның билікке келуі'] },
+            { type: 'choice', q: '12. Романдағы "Түленнің асы" қандай маңызға ие?', options: ['Жай ғана той', 'Этнографиялық дәстүрлер көрінісі', 'Торсанның жеңісі'], correct: 1 },
+            { type: 'choice', q: '13. Ұлпанның ең сенімді рухани серігі кім?', options: ['Торсан', 'Мүсіреп', 'Кенесары'], correct: 1 },
+            { type: 'choice', q: '14. Шығармадағы конфликт негізі не?', options: ['Ескілік пен жаңалықтың күресі', 'Екі рудың соғысы', 'Бай мен кедей айтысы'], correct: 0 },
+            { type: 'choice', q: '15. Романның шешімінде Ұлпан қандай күйде қалады?', options: ['Бақытты отбасылық өмір', 'Жалғыздық', 'Биліктен кету'], correct: 1 }
+        ];
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+            quizData.forEach((item, idx) => {
+                const card = document.createElement('div');
+                card.className = 'quiz-card p-6 rounded-xl shadow-lg';
+                card.id = `q-card-${idx}`;
+                
+                let html = `<p class="font-bold mb-4 text-amber-400">${item.q}</p>`;
+
+                if (item.type === 'choice') {
+                    item.options.forEach((opt, i) => {
+                        html += `<label class="block mb-2 p-3 rounded hover:bg-slate-700/50 cursor-pointer text-sm border border-transparent hover:border-slate-500/30 transition-all" id="q${idx}-opt${i}-label">
+                            <input type="radio" name="q${idx}" value="${i}" class="mr-3 accent-amber-500"> ${opt}
+                        </label>`;
+                    });
+                } else if (item.type === 'matching') {
+                    item.items.forEach((pair, i) => {
+                        html += `<div class="flex flex-col md:flex-row gap-2 mb-2 items-center text-xs">
+                            <span class="bg-slate-800 p-2 rounded w-full md:w-32 text-center border border-slate-700 font-bold">${pair.k}</span>
+                            <span class="text-amber-500 font-black">→</span>
+                            <select class="bg-slate-700 border border-slate-600 rounded p-2 flex-1 w-full outline-none focus:border-amber-500" data-q="${idx}" data-i="${i}" id="q${idx}-sel${i}">
+                                <option value="">Таңдаңыз...</option>
+                                ${item.items.map(p => `<option value="${p.v}">${p.v}</option>`).join('')}
+                            </select>
+                        </div>`;
+                    });
+                } else if (item.type === 'reorder') {
+                    item.items.forEach((task, i) => {
+                        html += `<div class="flex gap-4 mb-2 items-center text-sm bg-slate-800/30 p-2 rounded">
+                            <input type="number" min="1" max="3" class="w-12 bg-slate-900 border border-slate-600 rounded p-1 text-center text-amber-400 outline-none" data-q="${idx}" data-i="${i}" id="q${idx}-num${i}">
+                            <span class="text-slate-300">${task}</span>
+                        </div>`;
+                    });
+                }
+                card.innerHTML = html;
+                container.appendChild(card);
+            });
+        }
+
+        // Тестті тексеру және бояу
+        function checkQuizResults() {
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                let isCorrect = false;
+                if (q.type === 'choice') {
+                    const selected = document.querySelector(`input[name="q${idx}"]:checked`);
+                    const labels = document.querySelectorAll(`[id^="q${idx}-opt"]`);
+                    labels.forEach(l => l.classList.remove('correct-answer', 'wrong-answer'));
+                    if (selected) {
+                        const val = parseInt(selected.value);
+                        const label = document.getElementById(`q${idx}-opt${val}-label`);
+                        if (val === q.correct) { label.classList.add('correct-answer'); isCorrect = true; }
+                        else { 
+                            label.classList.add('wrong-answer'); 
+                            document.getElementById(`q${idx}-opt${q.correct}-label`).classList.add('correct-answer');
+                        }
+                    }
+                } else if (q.type === 'matching') {
+                    let count = 0;
+                    q.items.forEach((p, i) => {
+                        const el = document.getElementById(`q${idx}-sel${i}`);
+                        el.classList.remove('correct-answer', 'wrong-answer');
+                        if (el.value === p.v) { el.classList.add('correct-answer'); count++; }
+                        else el.classList.add('wrong-answer');
+                    });
+                    if (count === 3) isCorrect = true;
+                } else if (q.type === 'reorder') {
+                    let count = 0;
+                    q.items.forEach((p, i) => {
+                        const el = document.getElementById(`q${idx}-num${i}`);
+                        el.classList.remove('correct-answer', 'wrong-answer');
+                        if (parseInt(el.value) === i + 1) { el.classList.add('correct-answer'); count++; }
+                        else el.classList.add('wrong-answer');
+                    });
+                    if (count === 3) isCorrect = true;
+                }
+                if (isCorrect) score++;
+            });
+
+            if (score > quizData.length / 2) playCorrect(); else playWrong();
+            const display = document.getElementById('quiz-score-display');
+            display.innerText = `Сіздің нәтижеңіз: ${score} / ${quizData.length}`;
+            display.classList.remove('hidden');
+            display.classList.add('animate-pop');
+        }
+
+        // ҚАТАЛ ЭССЕ ТЕКСЕРУ АЛГОРИТМІ
+        function submitEssayStrict() {
+            const content = document.getElementById('essay-content').value.trim();
+            const wordCount = content.split(/\s+/).filter(w => w.length > 0).length;
+
+            // Романға қатысты кілт сөздер
+            const keywords = ['Ұлпан', 'Есеней', 'Торсан', 'Мүсіреп', 'Артықбай', 'халық', 'жер', 'дау', 'реформа', 'әйел', 'теңдік', 'билік', 'отаршылдық', 'дәстүр', 'этнография', 'ауыл', 'тағдыр', 'ақыл', 'ана', 'болыс'];
+            
+            // Сәйкес келетін сөздерді табу
+            let foundKeywords = keywords.filter(k => content.toLowerCase().includes(k.toLowerCase()));
+            
+            let score = 0;
+            let analysis = "";
+            let mistakes = [];
+            let strengths = [];
+            let note = "";
+            let isFail = false;
+
+            // 1. КӨЛЕМГЕ ШЕКТЕУ (Сөз саны 30-дан аз болса - ҚҰЛАЙДЫ)
+            if (wordCount < 30) {
+                isFail = true;
+                score = 2; // Өте төмен балл
+                analysis = "ЖҰМЫС ҚАБЫЛДАНБАДЫ. Мәтін көлемі тым аз (30 сөзден кем). Бұл эссе емес, жай ғана қысқаша пікір немесе сөйлем.";
+                mistakes.push("Сөз саны нормаға сай емес.");
+                mistakes.push("Тақырып мүлдем ашылмаған.");
+                mistakes.push("Тезис пен аргумент құрылымы сақталмаған.");
+                note = "Келесі жолы кем дегенде 60-70 сөз жазып, ойыңызды толық жеткізіңіз.";
+            } 
+            else {
+                // 2. МАЗМҰНДЫҚ ТАЛДАУ
+                let baseScore = 4; // Бастапқы балл
+                
+                // Кілт сөздерге + балл
+                if (foundKeywords.length > 2) baseScore += 2;
+                if (foundKeywords.length > 5) baseScore += 1;
+                
+                // Көлемге + балл
+                if (wordCount > 60) baseScore += 2;
+                if (wordCount > 100) baseScore += 1;
+
+                // Максимум 10
+                score = Math.min(baseScore, 10);
+
+                if (foundKeywords.length < 2) {
+                    score = Math.min(score, 4); // Кілт сөз жоқ болса, макс 4 балл
+                    mistakes.push("Мәтінде шығармаға қатысты нақты терминдер мен есімдер аз.");
+                    analysis = "Эссе жазылған, бірақ мазмұны тым жалпылама. Нақты шығарма оқиғаларына сүйену жетіспейді.";
+                } else {
+                    analysis = `Жұмыс жақсы құрылымдалған. Көлемі: ${wordCount} сөз. Шығармаға қатысты ${foundKeywords.length} маңызды ұғым қолданылған.`;
+                    strengths.push("Тақырып бойынша негізгі ойлар қамтылған.");
+                    strengths.push("Кілт сөздер орынды қолданылған.");
+                }
+                
+                if (score < 5) note = "Шығарманы қайта оқып, нақтырақ дәлелдер келтіріңіз.";
+                else note = "Жақсы нәтиже! Келесіде стильдік түрлендірулер қосыңыз.";
+            }
+
+            displayReport(score, { analysis, mistakes, strengths, methodist_note: note }, isFail);
+        }
+
+        function displayReport(essayScore, aiDetails, isFail) {
+            const report = document.getElementById('report-content');
+            
+            // Түстер мен хабарламаны анықтау
+            const scoreColor = essayScore >= 8 ? 'text-green-400' : (essayScore >= 5 ? 'text-yellow-400' : 'text-red-500');
+            const statusMsg = isFail ? "ҚАНАҒАТТАНАРЛЫҚСЫЗ!" : "ЖҰМЫС ҚАБЫЛДАНДЫ";
+            const statusClass = isFail ? "text-red-500 animate-pulse" : "text-green-400";
+
+            report.innerHTML = `
+                <div class="bg-slate-800 p-6 rounded-xl border-l-4 ${isFail ? 'border-red-500' : 'border-amber-500'} shadow-lg text-center">
+                    <p class="text-xs uppercase text-slate-400 mb-2 font-bold tracking-widest">Эссе бағасы</p>
+                    <p class="text-6xl font-black ${scoreColor} mb-2">${essayScore} / 10</p>
+                    <p class="text-lg font-bold ${statusClass}">${statusMsg}</p>
+                </div>
+
+                <div class="space-y-4 mt-6">
+                    <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700 shadow-inner">
+                        <h4 class="text-amber-500 font-bold mb-2 flex items-center gap-2">Маман сараптамасы:</h4>
+                        <p class="text-sm leading-relaxed text-slate-300">${aiDetails.analysis}</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-red-900/10 p-5 rounded-xl border border-red-500/20 text-sm">
+                            <h4 class="text-red-400 font-bold mb-2 italic">Кемшіліктер:</h4>
+                            ${aiDetails.mistakes.length > 0 ? `<ul class="list-disc ml-5 text-red-200/80 space-y-1">${aiDetails.mistakes.map(m => `<li>${m}</li>`).join('')}</ul>` : '<p class="text-slate-500 italic">Елеулі қателер жоқ</p>'}
+                        </div>
+                        <div class="bg-green-900/10 p-5 rounded-xl border border-green-500/20 text-sm">
+                            <h4 class="text-green-400 font-bold mb-2">Артықшылықтар:</h4>
+                            ${aiDetails.strengths.length > 0 ? `<ul class="list-disc ml-5 text-green-200/80 space-y-1">${aiDetails.strengths.map(m => `<li>${m}</li>`).join('')}</ul>` : '<p class="text-slate-500 italic">Артықшылықтарды көрсету үшін мазмұнды толықтырыңыз</p>'}
+                        </div>
+                    </div>
+                    <div class="bg-blue-900/10 p-5 rounded-xl border border-blue-500/20 text-sm text-center">
+                        <h4 class="text-blue-400 font-bold mb-1">📖 Әдістемелік кеңес:</h4>
+                        <p class="italic text-slate-300">${aiDetails.methodist_note}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('report-modal').classList.remove('hidden');
+            if (isFail) playWrong(); else playCorrect();
+        }
+
+        document.getElementById('essay-content').addEventListener('input', function(e) {
+            const words = e.target.value.trim().split(/\s+/).filter(w => w.length > 0).length;
+            document.getElementById('word-count').innerText = `Сөз саны: ${words} / 200`;
+        });
+
+        function closeModal() { document.getElementById('report-modal').classList.add('hidden'); }
+        window.onload = renderQuiz;
+    </script>
+</body>
+</html>
